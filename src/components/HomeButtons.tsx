@@ -8,10 +8,10 @@ function HomeButtons() {
   }
 
   return (
-    <div className="flex flex-col p-8 mt-2 gap-4 text-[#6B4E3C] font-abeezee">
+    <div className="flex flex-col p-8 mt-2 gap-4 text-[#000000] font-abeezee">
       {HomeButtonsData.map((item) => (
         <button
-          className="p-4 border border-[#6B4E3C]"
+          className="p-4 border border-[#000000]"
           key={item.link}
           onClick={() => handleClick(item.isTargetBlank, item.link)}
         >

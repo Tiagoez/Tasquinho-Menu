@@ -25,7 +25,7 @@ function MenuCategoryButton(props: PropsType) {
   return (
     <button
       onClick={toggleFilter}
-      className={`p-2 mr-2 mt-1 border-[0.5px] border-[#6B4E3C] font-abeezee rounded-md ${buttonColor}`}
+      className={`p-2 mr-2 mt-1 border-[0.5px] border-[#000000] font-abeezee rounded-md ${buttonColor}`}
     >
       {capitalizeFirstLetter(name)}
     </button>
@@ -36,8 +36,8 @@ export default MenuCategoryButton;
 
 export function changeButtonColor(truthyValue: boolean): string {
   if (truthyValue) {
-    return "bg-[#6B4E3C] text-white";
+    return "bg-[#FFFFFF] text-white";
   }
 
-  return "text-[#6B4E3C]";
+  return "text-[#000000]";
 }

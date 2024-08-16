@@ -117,7 +117,7 @@ function FilterModal(props: PropsType) {
     ) {
       return (
         <>
-          <hr className="w-100 mt-4 border-[#e6a881]" />
+          <hr className="w-100 mt-4 border-[#000000]" />
           <div className="flex justify-end gap-2 mt-2">
             {applyFilterButton}
             {clearFilterButton}
@@ -128,7 +128,7 @@ function FilterModal(props: PropsType) {
 
     return (
       <>
-        <hr className="w-100 mt-4 border-[#e6a881]" />
+        <hr className="w-100 mt-4 border-[#000000]" />
         <div className="flex justify-end gap-2 mt-2">{applyFilterButton}</div>
       </>
     );
@@ -139,7 +139,7 @@ function FilterModal(props: PropsType) {
 
   return (
     <div className="fixed mt-5 m-3">
-      <div className="z-10 p-4 w-100 rounded-md bg-[#FDF2D7] border-[1px] border-[#AD6639] flex justify-center flex-col">
+      <div className="z-10 p-4 w-100 rounded-md bg-[#FFFFFF] border-[1px] border-[#000000] flex justify-center flex-col">
         <div className="flex justify-end">
           <button onClick={toggleFilterModal}>
             <img src="/assets/close_icon.png" />
@@ -147,18 +147,18 @@ function FilterModal(props: PropsType) {
         </div>
 
         <div>
-          <p className="font-oxygen font-bold text-[#AD6639] text-lg mb-2">
+          <p className="font-oxygen font-bold text-[#000000] text-lg mb-2">
             Menu Categories
-            <hr className="w-100 mt-1 border-[#AD6639]" />
+            <hr className="w-100 mt-1 border-[#000000]" />
           </p>
 
           <div className="flex flex-wrap gap-1">{getMenuCategories()}</div>
         </div>
 
         <div className="mt-3">
-          <p className="font-oxygen font-bold text-[#AD6639] text-lg">
+          <p className="font-oxygen font-bold text-[#000000] text-lg">
             Others
-            <hr className="w-100 mt-1 border-[#AD6639] mb-2" />
+            <hr className="w-100 mt-1 border-[#00000] mb-2" />
           </p>
 
           <div className="flex flex-wrap gap-1">

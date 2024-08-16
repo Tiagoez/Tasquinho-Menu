@@ -15,13 +15,13 @@ export const HomeButtonsData: HomeButtonsType[] = [
   {
     label: 'FACEBOOK',
     icon: '/assets/facebook_icon.png',
-    link: 'https://www.facebook.com/',
+    link: 'https://www.facebook.com/profile.php?id=100056494126599',
     isTargetBlank: true,
   },
   {
     label: 'INSTAGRAM',
     icon: '/assets/ig_icon.png',
-    link: 'https://www.instagram.com/',
+    link: 'https://www.instagram.com/tasquinhopizzeria/',
     isTargetBlank: true,
   }
 ];

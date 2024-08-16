@@ -9,7 +9,7 @@ function FilterButton(props: PropsType) {
 
   return (
     <button
-      className="py-1 border-[0.5px] border-[#AD6639] text-[#AD6639]"
+      className="py-1 border-[0.5px] border-[#FFFFFF] text-[#000000]"
       onClick={onClick}
     >
       Filter

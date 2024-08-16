@@ -10,7 +10,7 @@ function FoodItems(props: PropsType) {
 
   const createdFoodLists = foodList.map((item) => {
     const heartIcon = <img className="ml-1" src="/assets/heart_icon.png" />;
-    const newIcon = <div className="bg-[#AD6639] text-white p-1 ml-1 text-[10px] rounded-md">New!</div>
+    const newIcon = <div className="bg-[#000000] text-white p-1 ml-1 text-[10px] rounded-md">New!</div>
 
     return (
       <div className="flex justify-between mb-1">
@@ -25,7 +25,7 @@ function FoodItems(props: PropsType) {
   });
 
   return (
-    <div className="font-abeezee text-[#6B4E3C] my-2">{createdFoodLists}</div>
+    <div className="font-abeezee text-[#1c1c1c] my-2">{createdFoodLists}</div>
   );
 }
 

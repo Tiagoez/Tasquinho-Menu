@@ -12,10 +12,10 @@ function ModalButton(props: PropsType) {
 
   function getClassName(): string {
     if (type === ButtonTypeEnum.FILLED) {
-      return "bg-[#AD6639] text-white p-2 rounded-md";
+      return "bg-[#000000] text-white p-2 rounded-md";
     }
 
-    return "border-[0.5px] border-[#AD6639] text-[#AD6639] p-2 rounded-md";
+    return "border-[0.5px] border-[#000000] text-[#000000] p-2 rounded-md";
   }
 
   return (

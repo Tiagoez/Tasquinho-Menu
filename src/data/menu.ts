@@ -1,17 +1,15 @@
-import { Beef, Breakfast, Dessert, Pork, Seafood, SubMenuType } from "./subMenus";
+import { Aperitivo, Pizza, PizzaBianca, Sobremesa, SubMenuType } from "./subMenus";
 
 export type MenuType = {
-    breakfast: SubMenuType[],
-    pork: SubMenuType[],
-    beef: SubMenuType[],
-    seafood: SubMenuType[],
-    dessert: SubMenuType[]
+    Aperitivo: SubMenuType[],
+    Pizza: SubMenuType[],
+    PizzaBianca: SubMenuType[],
+    Sobremesa: SubMenuType[],
 }
 
 export const Menu: MenuType = {
-    breakfast: Breakfast,
-    pork: Pork,
-    beef: Beef,
-    seafood: Seafood,
-    dessert: Dessert
+    Aperitivo: Aperitivo,
+    Pizza: Pizza,
+    PizzaBianca: PizzaBianca,
+    Sobremesa: Sobremesa,
 }
