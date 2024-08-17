@@ -11,7 +11,7 @@ export const Aperitivo: SubMenuType[] = [
   {
     name: "Pão de alho",
     details: "pão grelhado, alho e parmesao",
-    isVegetarian: false,
+    isVegetarian: true,
     isNew: false,
     isBestSeller: true,
     price: 2.00,
@@ -19,7 +19,7 @@ export const Aperitivo: SubMenuType[] = [
   {
     name: "Capresse",
     details: "mozzarella bocconcini fior di latte, tomate e manjericao",
-    isVegetarian: false,
+    isVegetarian: true,
     isNew: false,
     isBestSeller: false,
     price: 4.00,
@@ -27,7 +27,7 @@ export const Aperitivo: SubMenuType[] = [
   {
     name: "Bruschetta",
     details: "tomate aux bocadinhos, alho e azeite",
-    isVegetarian: false,
+    isVegetarian: true,
     isNew: false,
     isBestSeller: false,
     price: 4.50,
@@ -70,7 +70,7 @@ export const Pizza: SubMenuType[] = [
   {
     name: "Margherita",
     details: "tomate, mozzarella e oregaos",
-    isVegetarian: false,
+    isVegetarian: true,
     isNew: false,
     isBestSeller: false,
     price: 6.00,
@@ -94,7 +94,7 @@ export const Pizza: SubMenuType[] = [
   {
     name: "Beringela",
     details: "tomate, mozzarella, cebola, ricotta e beringela frita",
-    isVegetarian: false,
+    isVegetarian: true,
     isNew: true,
     isBestSeller: false,
     price: 7.00,
@@ -102,7 +102,7 @@ export const Pizza: SubMenuType[] = [
   {
     name: "Vegetariana",
     details: "legumes do dia",
-    isVegetarian: false,
+    isVegetarian: true,
     isNew: false,
     isBestSeller: false,
     price: 7.00,
@@ -128,7 +128,7 @@ export const Pizza: SubMenuType[] = [
     details: "tomate, mozzarella , fiambre, cogumelos e azeitonas",
     isVegetarian: false,
     isNew: false,
-    isBestSeller: false,
+    isBestSeller: true,
     price: 7.50,
   },
   {
@@ -136,7 +136,7 @@ export const Pizza: SubMenuType[] = [
     details: "tomate, mozzarella, chourica spianata, bacon",
     isVegetarian: false,
     isNew: false,
-    isBestSeller: false,
+    isBestSeller: true,
     price: 7.50,
   },
   {
@@ -152,7 +152,7 @@ export const Pizza: SubMenuType[] = [
     details: "tomate, presunto, burrata, rucula e parmesao",
     isVegetarian: false,
     isNew: false,
-    isBestSeller: false,
+    isBestSeller: true,
     price: 8.50,
   },
 ];
@@ -161,7 +161,7 @@ export const PizzaBianca: SubMenuType[] = [
   {
     name: "Bianca",
     details: "cebola, mozzarella e queijo parmesao",
-    isVegetarian: false,
+    isVegetarian: true,
     isNew: false,
     isBestSeller: false,
     price: 4.50,
@@ -169,7 +169,7 @@ export const PizzaBianca: SubMenuType[] = [
   {
     name: "Pizza Bruschetta",
     details: "tomate fresco, queijo burrata, parmesao e vinagre balsamico",
-    isVegetarian: false,
+    isVegetarian: true,
     isNew: false,
     isBestSeller: false,
     price: 7.50,
@@ -177,7 +177,7 @@ export const PizzaBianca: SubMenuType[] = [
   {
     name: "4 Formaggi",
     details: "selecão de queijos do chef",
-    isVegetarian: false,
+    isVegetarian: true,
     isNew: false,
     isBestSeller: false,
     price: 8.00,
