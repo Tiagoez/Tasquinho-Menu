@@ -1,6 +1,11 @@
+import {FaInstagram} from "react-icons/fa";
+import {IconType} from "react-icons";
+import {GrRestaurant} from "react-icons/gr";
+import {LiaFacebookSquare} from "react-icons/lia";
+
 type HomeButtonsType = {
   label: string;
-  icon: string;
+  icon: IconType;
   link: string;
   isTargetBlank: boolean;
 };
@@ -8,19 +13,19 @@ type HomeButtonsType = {
 export const HomeButtonsData: HomeButtonsType[] = [
   {
     label: 'MENU',
-    icon: '/assets/menu_icon.png',
+    icon: GrRestaurant,
     link: '/menu',
     isTargetBlank: false,
   },
   {
     label: 'FACEBOOK',
-    icon: '/assets/facebook_icon.png',
+    icon: LiaFacebookSquare,
     link: 'https://www.facebook.com/profile.php?id=100056494126599',
     isTargetBlank: true,
   },
   {
     label: 'INSTAGRAM',
-    icon: '/assets/ig_icon.png',
+    icon: FaInstagram,
     link: 'https://www.instagram.com/tasquinhopizzeria/',
     isTargetBlank: true,
   }

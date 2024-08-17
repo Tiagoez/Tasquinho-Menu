@@ -16,7 +16,7 @@ function HomeButtons() {
           onClick={() => handleClick(item.isTargetBlank, item.link)}
         >
           <div className="flex justify-center items-center">
-            <img src={item.icon} className="mr-2" />
+            <item.icon className="mr-1" />
             {item.label}
           </div>
         </button>
