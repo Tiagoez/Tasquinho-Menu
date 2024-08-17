@@ -43,6 +43,7 @@ function useSearch(
     setAppliedFilterValues({
       isNew: false,
       isBestSeller: false,
+      isVegetarian: false
     });
 
     if (event.target.value.trim() === "") {
