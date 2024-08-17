@@ -10,6 +10,8 @@ import useFilter from "../hooks/useFilter";
 import {useNavigate} from "react-router-dom";
 import DataState from "../components/DataState";
 import {IoIosArrowBack} from "react-icons/io";
+import {TbPizzaOff} from "react-icons/tb";
+import {GiPizzaCutter} from "react-icons/gi";
 
 function MenuContainer() {
     const navigate = useNavigate();
@@ -73,12 +75,12 @@ function MenuContainer() {
 
     function displayMenu() {
         if (isSearching) {
-            return <DataState icon={"search_icon.png"} label={"Searching..."}/>;
+            return <DataState icon={GiPizzaCutter} label={"Searching..."}/>;
         }
 
         if (!checkMenuLength()) {
             return (
-                <DataState icon={"empty_box_icon.png"} label={"No Results Found"}/>
+                <DataState icon={TbPizzaOff} label={"No Results Found"}/>
             );
         }
 
