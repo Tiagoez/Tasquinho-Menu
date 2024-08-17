@@ -11,8 +11,8 @@ function FoodItems(props: PropsType) {
   const { foodList } = props;
 
   const createdFoodLists = foodList.map((item) => {
-      const heartIcon = <RiHeart3Fill className="text-red-700 ml-1" />;
-      const vegetarianIcon = <RiLeafFill className="text-green-700 ml-1" />;
+      const heartIcon = <RiHeart3Fill className="text-red ml-1" />;
+      const vegetarianIcon = <RiLeafFill className="text-green ml-1" />;
       const newIcon = <div className="bg-[#000000] text-white p-1 ml-1 text-[10px] rounded-md">New!</div>
 
     return (
