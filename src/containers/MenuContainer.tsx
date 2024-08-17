@@ -103,7 +103,7 @@ function MenuContainer() {
     return (
         <div className="flex justify-center">
             {filterModal}
-            <div className="w-[36rem]">
+            <div className="w-[36rem] max-w-[100vw] p-5">
                 <div className="mb-5 grid gap-4" style={{gridTemplateColumns: "auto 3fr 1fr"}}>
                     <button className="p-2 border-[0.5px] border-[#3f3f3f]" onClick={redirectToHome}>
                         <IoIosArrowBack />
