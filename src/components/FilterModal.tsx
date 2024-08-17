@@ -2,10 +2,11 @@ import React from "react";
 import MenuCategoryButton from "./FilterCategoryButton";
 import { Menu, MenuType } from "../data/menu";
 import { FilterValuesType } from "../hooks/useFilter";
-import { changeButtonColor } from "../components/FilterCategoryButton";
+import { changeButtonColor } from "./FilterCategoryButton";
 import OtherFilterButton from "./OtherFilterButton";
 import ModalButton from "./ModalButton";
 import { ButtonTypeEnum } from "../enums/ButtonTypeEnum";
+import {MdClose} from "react-icons/md";
 
 type PropsType = {
   filterMenuByCategory: (
@@ -142,7 +143,7 @@ function FilterModal(props: PropsType) {
       <div className="z-10 p-4 w-100 rounded-md bg-[#FFFFFF] border-[1px] border-[#000000] flex justify-center flex-col">
         <div className="flex justify-end">
           <button onClick={toggleFilterModal}>
-            <img src="/assets/close_icon.png" />
+            <MdClose />
           </button>
         </div>
 
