@@ -11,7 +11,7 @@ function SearchInput(props: PropsType) {
   return (
     <>
       <input
-        placeholder="perquisar"
+        placeholder="Perquisar"
         type="text"
         value={value}
         onChange={onChange}
