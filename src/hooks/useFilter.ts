@@ -4,6 +4,7 @@ import { MenuType } from "../data/menu";
 export type FilterValuesType = {
   isNew: boolean;
   isBestSeller: boolean;
+  isVegetarian: boolean;
 };
 
 function useFilter(
@@ -17,6 +18,7 @@ function useFilter(
   const [filterValues, setFilterValues] = useState<FilterValuesType>({
     isNew: false,
     isBestSeller: false,
+    isVegetarian: false
   });
 
   const [appliedSelectedCategories, setAppliedSelectedCategories] = useState<
@@ -27,6 +29,7 @@ function useFilter(
     useState<FilterValuesType>({
       isNew: false,
       isBestSeller: false,
+      isVegetarian: false
     });
 
   const [showFilterModal, setShowFilterModal] = useState<boolean>(false);
@@ -38,6 +41,7 @@ function useFilter(
     setFilterValues({
       isNew: false,
       isBestSeller: false,
+      isVegetarian: false
     });
     setMenuData(originalMenuData);
   }
@@ -56,6 +60,7 @@ function useFilter(
     filters: {
       isNew?: boolean;
       isBestSeller?: boolean;
+      isVegetarian?: boolean;
     } = {}
   ) {
     let filteredMenu: any = {};
@@ -69,6 +74,7 @@ function useFilter(
       setAppliedFilterValues({
         isNew: false,
         isBestSeller: false,
+        isVegetarian: false
       });
       return setMenuData(originalMenuData);
     }

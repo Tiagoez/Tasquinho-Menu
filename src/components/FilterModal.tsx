@@ -14,6 +14,7 @@ type PropsType = {
     filters: {
       isNew?: boolean;
       isBestSeller?: boolean;
+      isVegetarian?: boolean;
     }
   ) => void;
   toggleFilterModal: () => void;
@@ -70,6 +71,15 @@ function FilterModal(props: PropsType) {
   }
 
   function selectOtherCategories(filterName: string): void {
+    if (filterName === "Vegetarian") {
+      setFilterValues((prevData) => {
+        return {
+          ...prevData,
+          isVegetarian: !filterValues.isVegetarian,
+        };
+      });
+    }
+
     if (filterName === "New") {
       setFilterValues((prevData) => {
         return {
