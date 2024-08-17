@@ -15,7 +15,7 @@ function SearchInput(props: PropsType) {
         type="text"
         value={value}
         onChange={onChange}
-        className="col-span-3 p-1 border-[0.5px] border-[#000000] focus:outline-none bg-[#ffffff] text-[#000000] placeholder-[#000000] font-abeezee"
+        className="p-1 border-[0.5px] border-[#000000] focus:outline-none bg-[#ffffff] text-[#000000] placeholder-[#000000] font-abeezee"
       />
     </>
   );
