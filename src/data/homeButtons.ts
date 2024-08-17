@@ -8,6 +8,7 @@ type HomeButtonsType = {
   icon: IconType;
   link: string;
   isTargetBlank: boolean;
+  backgroundColor: string;
 };
 
 export const HomeButtonsData: HomeButtonsType[] = [
@@ -16,17 +17,20 @@ export const HomeButtonsData: HomeButtonsType[] = [
     icon: GrRestaurant,
     link: '/menu',
     isTargetBlank: false,
+    backgroundColor: 'green'
   },
   {
     label: 'FACEBOOK',
     icon: LiaFacebookSquare,
     link: 'https://www.facebook.com/profile.php?id=100056494126599',
     isTargetBlank: true,
+    backgroundColor: 'white'
   },
   {
     label: 'INSTAGRAM',
     icon: FaInstagram,
     link: 'https://www.instagram.com/tasquinhopizzeria/',
     isTargetBlank: true,
+    backgroundColor: 'red'
   }
 ];

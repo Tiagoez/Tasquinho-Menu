@@ -11,7 +11,7 @@ function HomeButtons() {
     <div className="flex flex-col p-8 mt-2 gap-4 text-[#000000] font-abeezee">
       {HomeButtonsData.map((item) => (
         <button
-          className="p-4 border border-[#000000]"
+          className={"p-4 border border-[#000000] hover:bg-" + item.backgroundColor}
           key={item.link}
           onClick={() => handleClick(item.isTargetBlank, item.link)}
         >
