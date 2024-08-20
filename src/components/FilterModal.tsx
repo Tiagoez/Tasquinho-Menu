@@ -10,7 +10,7 @@ import {MdClose} from "react-icons/md";
 
 type PropsType = {
   filterMenuByCategory: (
-    categories: (keyof MenuType)[],
+    categories: string[],
     filters: {
       isNew?: boolean;
       isBestSeller?: boolean;
@@ -18,9 +18,9 @@ type PropsType = {
     }
   ) => void;
   toggleFilterModal: () => void;
-  selectedCategories: (keyof MenuType)[];
+  selectedCategories: string[];
   setSelectedCategories: React.Dispatch<
-    React.SetStateAction<(keyof MenuType)[]>
+    React.SetStateAction<string[]>
   >;
   filterValues: FilterValuesType;
   setFilterValues: React.Dispatch<React.SetStateAction<FilterValuesType>>;
@@ -40,15 +40,15 @@ function FilterModal(props: PropsType) {
     setSearchValue,
   } = props;
 
-  const menuData: MenuType = Menu;
+  const menuData: MenuType[] = Menu;
 
   function getMenuCategories(): Array<JSX.Element> {
     let subMenuItems: Array<JSX.Element> = [];
 
-    for (const subMenu in menuData) {
+    for (const subMenu of menuData) {
       let createdSubMenu = (
         <MenuCategoryButton
-          name={subMenu}
+          name={subMenu.name}
           selectCategory={selectCategory}
           selectedCategories={selectedCategories}
         />

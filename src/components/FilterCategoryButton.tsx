@@ -4,7 +4,7 @@ import { MenuType } from "../data/menu";
 type PropsType = {
   name: string;
   selectCategory: (categoryName: string) => void;
-  selectedCategories: (keyof MenuType)[];
+  selectedCategories: string[];
 };
 
 function MenuCategoryButton(props: PropsType) {

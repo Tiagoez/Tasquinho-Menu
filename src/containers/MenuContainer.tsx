@@ -15,7 +15,7 @@ import {GiPizzaCutter} from "react-icons/gi";
 
 function MenuContainer() {
     const navigate = useNavigate();
-    const [menuData, setMenuData] = useState<MenuType>(Menu);
+    const [menuData, setMenuData] = useState<MenuType[]>(Menu);
 
     const {
         filterMenuByCategory,
@@ -45,8 +45,8 @@ function MenuContainer() {
     function checkMenuLength(): boolean {
         let menuLength = 0;
 
-        for (const subMenu in menuData) {
-            const foodList = menuData[subMenu as keyof MenuType];
+        for (const subMenu of menuData) {
+            const foodList = subMenu.items;
 
             menuLength += foodList.length;
         }
@@ -57,12 +57,12 @@ function MenuContainer() {
     function getMenuCategories(): Array<JSX.Element> {
         let subMenuItems: Array<JSX.Element> = [];
 
-        for (const subMenu in menuData) {
-            const foodList = menuData[subMenu as keyof MenuType];
+        for (const subMenu of menuData) {
+            const foodList = subMenu.items;
 
             let createdSubMenu = (
                 <>
-                    {foodList.length !== 0 && <MenuCategoryName name={subMenu}/>}
+                    {foodList.length !== 0 && <MenuCategoryName name={subMenu.name}/>}
                     <FoodItems foodList={foodList}/>
                 </>
             );

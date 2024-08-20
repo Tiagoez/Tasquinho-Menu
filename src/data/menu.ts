@@ -1,15 +1,7 @@
-import { Aperitivo, Pizza, PizzaBianca, Sobremesa, SubMenuType } from "./subMenus";
+import {Aperitivo, Pizza, PizzaBianca, Sobremesa, SubMenuType} from "./subMenus";
 
 export type MenuType = {
-    Aperitivo: SubMenuType[],
-    Pizza: SubMenuType[],
-    PizzaBianca: SubMenuType[],
-    Sobremesa: SubMenuType[],
+    name: string,
+    items: SubMenuType[]
 }
-
-export const Menu: MenuType = {
-    Aperitivo: Aperitivo,
-    Pizza: Pizza,
-    PizzaBianca: PizzaBianca,
-    Sobremesa: Sobremesa,
-}
+export const Menu: MenuType[] = [ Aperitivo, Pizza, PizzaBianca, Sobremesa];
