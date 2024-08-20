@@ -62,11 +62,11 @@ function FilterModal(props: PropsType) {
 
   function selectCategory(categoryName: string): void {
     setSelectedCategories((prevData) => {
-      if (selectedCategories.includes(categoryName as keyof MenuType)) {
+      if (selectedCategories.includes(categoryName)) {
         return prevData.filter((item) => item !== categoryName);
       }
 
-      return [...prevData, categoryName as keyof MenuType];
+      return [...prevData, categoryName];
     });
   }
 
@@ -123,6 +123,7 @@ function FilterModal(props: PropsType) {
   function displayModalButtons(): JSX.Element {
     if (
       selectedCategories.length !== 0 ||
+        filterValues.isVegetarian ||
       filterValues.isNew ||
       filterValues.isBestSeller
     ) {
@@ -145,6 +146,7 @@ function FilterModal(props: PropsType) {
     );
   }
 
+  const VegetarianButtonColor = changeButtonColor(filterValues.isVegetarian);
   const bestSellerButtonColor = changeButtonColor(filterValues.isBestSeller);
   const newButtonColor = changeButtonColor(filterValues.isNew);
 
@@ -173,6 +175,11 @@ function FilterModal(props: PropsType) {
           </p>
 
           <div className="flex flex-wrap gap-1">
+            <OtherFilterButton
+              name={"Vegetarian"}
+              selectOtherCategories={selectOtherCategories}
+              buttonColor={VegetarianButtonColor}
+            />
             <OtherFilterButton
               name={"Best Seller"}
               selectOtherCategories={selectOtherCategories}

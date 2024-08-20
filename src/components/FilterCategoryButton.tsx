@@ -1,5 +1,4 @@
 import React from "react";
-import { MenuType } from "../data/menu";
 
 type PropsType = {
   name: string;
@@ -19,7 +18,7 @@ function MenuCategoryButton(props: PropsType) {
   }
 
   const buttonColor = changeButtonColor(
-    selectedCategories.includes(name as keyof MenuType)
+    selectedCategories.includes(name)
   );
 
   return (

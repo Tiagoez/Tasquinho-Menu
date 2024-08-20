@@ -48,12 +48,13 @@ function useFilter(
 
     const otherFiltersOnlyAreSelected =
         selectedCategories.length === 0 &&
-        (filterValues.isNew || filterValues.isBestSeller);
+        (filterValues.isNew || filterValues.isBestSeller || filterValues.isVegetarian);
 
     const noFiltersAreSelected =
         selectedCategories.length === 0 &&
         !filterValues.isNew &&
-        !filterValues.isBestSeller;
+        !filterValues.isBestSeller &&
+        !filterValues.isVegetarian;
 
     function filterMenuByCategory(
         categories: string[],
@@ -84,25 +85,25 @@ function useFilter(
 
             if (
                 !categories.includes(subMenu.name) &&
-                (!filters.isNew || !filters.isBestSeller)
+                (!filters.isNew || !filters.isBestSeller || !filters.isVegetarian)
             ) {
                 categoryMenu = [];
+            }
+
+            if (filters.isVegetarian && categories.includes(subMenu.name)) {
+                categoryMenu = categoryMenu.filter((item) => item.isVegetarian);
             }
 
             if (filters.isNew && categories.includes(subMenu.name)) {
                 categoryMenu = categoryMenu.filter((item) => item.isNew);
             }
 
-            if (
-                filters.isBestSeller &&
-                categories.includes(subMenu.name)
-            ) {
-                categoryMenu = categoryMenu.filter(
-                    (item) => item.isBestSeller
+            if (filters.isBestSeller && categories.includes(subMenu.name)) {
+                categoryMenu = categoryMenu.filter((item) => item.isBestSeller
                 );
             }
 
-            filteredMenu.push({name: subMenu.name, items: categoryMenu});
+            if(categoryMenu) filteredMenu.push({name: subMenu.name, items: categoryMenu});
         }
 
         setMenuData(filteredMenu);
