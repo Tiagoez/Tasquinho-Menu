@@ -35,7 +35,7 @@ export default MenuCategoryButton;
 
 export function changeButtonColor(truthyValue: boolean): string {
   if (truthyValue) {
-    return "bg-[#FFFFFF] text-white";
+    return "bg-[#E4E4E4]";
   }
 
   return "text-[#000000]";
